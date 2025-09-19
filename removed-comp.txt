@@ -1,0 +1,4 @@
+<!-- overlay hero image-->
+<!-- Overlay gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-slate-50/60 to-white/80 dark:from-slate-900/70 dark:to-slate-950/90 z-0"></div>
+
