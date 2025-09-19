@@ -1,48 +1,32 @@
----
-/*
-  Hero: split layout (text left, artwork / feature grid right).
-  CTA styling matches the demo weight + spacing.
-*/
----
-<section class="pt-16 pb-20">
-  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-    <!-- left: heading + description -->
-    <div class="max-w-xl">
-      <p class="text-sm font-medium uppercase tracking-wider text-brand mb-3">Automate your design process</p>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
-        Automate your design process for creative freedom
-      </h1>
-      <p class="text-lg text-slate-700 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-      </p>
+<section
+  class="relative flex flex-col md:flex-row items-center justify-between min-h-screen px-6 py-16 md:py-24 overflow-hidden bg-cover bg-center"
+  style="background-image: url('/images/hero-jpg.jpg');"
+>
+  <!-- Overlay gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-slate-50/60 to-white/80 dark:from-slate-900/70 dark:to-slate-950/90 z-0"></div>
 
-      <div class="flex gap-4">
-        <a href="#signup" class="inline-block px-6 py-3 rounded-md bg-brand text-white font-semibold shadow">Start Trial — It's Free</a>
-        <a href="#features" class="inline-block px-6 py-3 rounded-md border border-slate-200 text-slate-700">Learn more</a>
-      </div>
+  <!-- LEFT: heading + description -->
+  <div class="relative max-w-xl text-center md:text-left bg-white/70 dark:bg-slate-900/50 backdrop-blur-md rounded-lg p-6 md:p-10 shadow-md z-10">
+    <p class="text-sm leading-normal font-medium uppercase tracking-wider text-brand mb-3">
+      Automate your Business Intelligence
+    </p>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-normal mb-4">
+      Implement Data Driven Decisions
+    </h1>
+    <p class="text-lg text-slate-700 dark:text-slate-300 mb-6">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+    </p>
+  </div>
 
-      <!-- small logo/customer row -->
-      <div class="mt-8 flex items-center gap-6 text-sm text-slate-600">
-        <div class="flex items-center gap-3">
-          <img src="/images/logos/1.svg" alt="logo" class="h-6 w-auto" />
-          <span>Trusted by teams</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- right: illustration + feature icons grid -->
-    <div class="relative">
-      <!-- hero illustration (replace image path with your art) -->
-      <div class="rounded-2xl border p-6 bg-white shadow-md">
-        <img src="/images/hero-illustration.jpg" alt="Illustration" class="w-full rounded-lg object-cover" />
-      </div>
-
-      <!-- floating icons grid (small) -->
-      <div class="grid grid-cols-3 gap-3 mt-4">
-        <div class="p-3 border rounded-lg text-center">Dynamite</div>
-        <div class="p-3 border rounded-lg text-center">Mailbox</div>
-        <div class="p-3 border rounded-lg text-center">Folder</div>
-      </div>
-    </div>
+  <!-- RIGHT: CTA buttons -->
+  <div class="mt-10 md:mt-0 flex flex-col sm:flex-row gap-4 md:justify-end z-10">
+    <a href="#signup" class="group inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand text-white font-semibold shadow transition-all hover:bg-green-600">
+      Start Trial — It's Free
+      <span class="ml-2 transform transition-transform group-hover:translate-x-1">➔</span>
+    </a>
+    <a href="#features" class="group inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-200 text-slate-700 dark:text-slate-200 transition-all hover:border-green-500 hover:text-green-600 dark:hover:text-green-400">
+      Learn More
+      <span class="ml-2 transform transition-transform group-hover:translate-x-1">➔</span>
+    </a>
   </div>
 </section>

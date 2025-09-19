@@ -16,6 +16,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "astro": "^5.13.8"
   },
   "devDependencies": {
