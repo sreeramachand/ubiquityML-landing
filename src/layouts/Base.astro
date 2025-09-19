@@ -1,0 +1,22 @@
+---
+/*
+  Base layout that injects global CSS and font link.
+  All pages should be wrapped by <Base> to ensure consistent <head>.
+*/
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Idol — Replica (Astro + Tailwind)</title>
+    <meta name="description" content="Replica of the Idol landing demo using Astro + Tailwind" />
+    <!-- Link to our global stylesheet (processed by Tailwind / PostCSS) -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- Favicon (put your png at public/siteicon.png) -->
+    <link rel="icon" type="image/png" href="/siteicon.png" />
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>

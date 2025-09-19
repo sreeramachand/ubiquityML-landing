@@ -1,0 +1,53 @@
+---
+/*
+  Pricing block: three cards with a featured center card.
+  Uses Tailwind utilities to match spacing/typography of the demo.
+*/
+---
+<section id="pricing" class="py-16 bg-slate-50">
+  <div class="container mx-auto px-6 text-center mb-12">
+    <h2 class="text-3xl font-bold mb-2">Choose the right plan</h2>
+    <p class="text-slate-600 max-w-2xl mx-auto">We have designed our pricing to help you find the best solution for your business.</p>
+  </div>
+
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 (starter) -->
+      <div class="p-6 border rounded-lg bg-white">
+        <div class="text-sm font-medium text-slate-500">Starter</div>
+        <div class="mt-4 text-3xl font-extrabold">$9.99 <span class="text-base font-medium text-slate-500">/ month</span></div>
+        <ul class="mt-4 text-sm text-slate-600 space-y-2">
+          <li>Unlimited Feedback boards</li>
+          <li>Unlimited Prioritization Table</li>
+          <li>Single Sign-On (SSO)</li>
+        </ul>
+        <a class="mt-6 inline-block px-4 py-2 rounded-md border border-slate-200" href="#signup">start trial</a>
+      </div>
+
+      <!-- Featured Card -->
+      <div class="p-6 rounded-lg bg-white pricing-featured border-2 border-brand">
+        <div class="text-sm font-medium text-slate-500">Pro</div>
+        <div class="mt-4 text-4xl font-extrabold text-slate-900">$29 <span class="text-base font-medium text-slate-500">/ month</span></div>
+        <div class="mt-3 text-slate-600">Most popular</div>
+        <ul class="mt-4 text-sm text-slate-600 space-y-2">
+          <li>Brand Customization</li>
+          <li>Unlimited Tracked Users</li>
+          <li>Custom Domain</li>
+        </ul>
+        <a class="mt-6 inline-block px-6 py-3 rounded-md bg-brand text-white font-semibold" href="#signup">start trial</a>
+      </div>
+
+      <!-- Card 3 (enterprise) -->
+      <div class="p-6 border rounded-lg bg-white">
+        <div class="text-sm font-medium text-slate-500">Enterprise</div>
+        <div class="mt-4 text-3xl font-extrabold">$99 <span class="text-base font-medium text-slate-500">/ month</span></div>
+        <ul class="mt-4 text-sm text-slate-600 space-y-2">
+          <li>Dedicated Support</li>
+          <li>Custom SLAs</li>
+          <li>Priority onboarding</li>
+        </ul>
+        <a class="mt-6 inline-block px-4 py-2 rounded-md border border-slate-200" href="#signup">start trial</a>
+      </div>
+    </div>
+  </div>
+</section>
