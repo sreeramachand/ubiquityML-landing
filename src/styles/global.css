@@ -35,3 +35,7 @@ html, body {
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
   transform: translateY(-4px);
 }
+
+.custom-size-icon {
+  font-size: 1.5em;
+}
