@@ -5,8 +5,11 @@
   <!-- Overlay gradient -->
   <div class="absolute inset-0 bg-gradient-to-b from-slate-50/60 to-white/80 dark:from-slate-900/70 dark:to-slate-950/90 z-0"></div>
 
+  <!-- Containerize the left and right elements -->
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-4">
+
   <!-- LEFT: heading + description -->
-  <div class="relative max-w-xl text-center md:text-left bg-white/70 dark:bg-slate-900/50 backdrop-blur-md rounded-lg p-6 md:p-10 shadow-md z-10">
+  <div class="relative max-w-xl text-center bg-white/70 dark:bg-slate-900/50 backdrop-blur-md rounded-lg p-6 md:p-10 shadow-md z-10">
     <p class="text-sm leading-normal font-medium uppercase tracking-wider text-brand mb-3">
       Automate your Business Intelligence
     </p>
@@ -19,7 +22,7 @@
   </div>
 
   <!-- RIGHT: CTA buttons -->
-  <div class="mt-10 md:mt-0 flex flex-col sm:flex-row gap-4 md:justify-end z-10">
+  <div class="mt-10 md:mt-0 flex flex-col min-w-10 sm:flex-row gap-4 md:justify-end z-10">
     <a href="#signup" class="group inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand text-white font-semibold shadow transition-all hover:bg-green-600">
       Start Trial — It's Free
       <span class="ml-2 transform transition-transform group-hover:translate-x-1">➔</span>
@@ -29,4 +32,8 @@
       <span class="ml-2 transform transition-transform group-hover:translate-x-1">➔</span>
     </a>
   </div>
+  
+  </div>
+
+
 </section>
