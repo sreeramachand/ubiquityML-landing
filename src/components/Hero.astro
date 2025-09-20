@@ -2,8 +2,25 @@
   class="relative flex flex-col md:flex-row items-center justify-between min-h-screen px-6 py-16 md:py-24 overflow-hidden bg-cover bg-center"
   style="background-image: url('/images/nasa-hero.jpg');"
 >
-  <!-- Overlay removed, find in textfile -->
 
+<!-- Background video -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="/images/nasa-hero.jpg"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source src="/hero-bg-vid1_landscape.mp4" type="video/mp4" />
+    <!-- Fallback text if video fails completely -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay removed, find in textfile -->
+    <!-- Optional overlay for readability -->
+  <div class="absolute inset-0 bg-black/30 z-0"></div>
+  
   <!-- Containerize the left and right elements -->
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-4">
 
@@ -23,7 +40,7 @@
   <!-- RIGHT: CTA buttons -->
   <div class="mt-10 md:mt-0 flex flex-col min-w-10 sm:flex-row gap-4 md:justify-end z-10">
     <a href="#signup" class="group inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand text-white font-semibold shadow transition-all hover:bg-green-600">
-      Start Trial — It's Free
+      Start Now
       <span class="ml-2 transform transition-transform group-hover:translate-x-1">➔</span>
     </a>
     <a href="#features" class="group inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-200 text-slate-700 dark:text-slate-200 transition-all hover:border-green-500 hover:text-green-600 dark:hover:text-green-400">
