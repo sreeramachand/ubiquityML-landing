@@ -1,12 +1,5 @@
-# Bind to the port Cloud Run provides
-:8080 {
-    # Root of the built Astro site
-    root * /usr/share/caddy
-
-    # Try to serve files directly, fallback to index.html
-    try_files {path} /index.html
-
-    # Enable static file server
+:80 {
+    root * /srv
     file_server
-
+    encode zstd gzip
 }

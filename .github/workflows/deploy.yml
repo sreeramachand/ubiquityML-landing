@@ -1,48 +1,40 @@
 name: Deploy to Cloud Run
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     permissions:
       id-token: write
       contents: read
 
     steps:
-      # Step 1 — Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2 — Authenticate with GCP
       - id: auth
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ secrets.GCP_SA_EMAIL }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-      # Step 3 — Set up gcloud CLI
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      # Step 4 — Confirm authentication
       - name: Confirm GCP authentication
         run: gcloud auth list
 
-      # Step 5 — Build Docker image and push to Artifact Registry
       - name: Build Docker image
         run: |
-          gcloud builds submit \
-            --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/ubiquityml-landing
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/ubiquityml-landing .
 
-      # Step 6 — Deploy to Cloud Run
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy ubiquityml-landing \
